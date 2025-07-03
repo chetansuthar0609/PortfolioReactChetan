@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.main {
+    /* height: 100dvh; */
+    width: 100%;
+    background-color: rgb(14, 12, 12);
+}
+
+.aboutSection {
+    min-height: calc(100dvh - 70px);
+    /* padding: 2rem 1rem; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+.selfname {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+}
+
+.position {
+    background: linear-gradient(#484E53, #4FC3F7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+.aboutText {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #dcdcdc;
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Responsive Text */
+@media (min-width: 768px) {
+  .selfname {
+    text-align: left;
+  }
+  .position, .aboutText {
+    text-align: left;
+  }
+}
+
+/* Common style for all tech tags */
+.htmltag,
+.csstag,
+.bootstraptag,
+.jstag,
+.reactjstag,
+.nodejstag,
+.mysqltag,
+.mongotag,
+.expresstag {
+  position: relative;
+  width: 100%;
+  max-width: 130px;
+  height: 130px;
+  border-radius: 20px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 0;
+  transition: transform 0.4s ease;
+  margin: auto;
+}
+
+/* Hover: scale and glow effect */
+.htmltag:hover,
+.csstag:hover,
+.bootstraptag:hover,
+.jstag:hover,
+.reactjstag:hover,
+.nodejstag:hover,
+.mysqltag:hover,
+.mongotag:hover,
+.expresstag:hover {
+  transform: scale(1.1);
+}
+
+/* Moving animated gradient border */
+.htmltag::before,
+.csstag::before,
+.bootstraptag::before,
+.jstag::before,
+.reactjstag::before,
+.nodejstag::before,
+.mysqltag::before,
+.mongotag::before,
+.expresstag::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(
+    120deg,
+    #00f0ff,
+    #ff00e0,
+    #00ff8c,
+    #ffcc00,
+    #00f0ff
+  );
+  background-size: 400% 400%;
+  animation: animatedBorder 6s linear infinite;
+  border-radius: 22px;
+}
+
+/* Inner background to mask the middle */
+.htmltag::after,
+.csstag::after,
+.bootstraptag::after,
+.jstag::after,
+.reactjstag::after,
+.nodejstag::after,
+.mysqltag::after,
+.mongotag::after,
+.expresstag::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #0f0f0f;
+  border-radius: 18px;
+  z-index: -1;
+}
+
+/* Gradient animation */
+@keyframes animatedBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Icon styling */
+.htmltag svg {
+  color: #e44d26;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.csstag svg {
+  color: #264de4;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.bootstraptag svg {
+  color: #563d7c;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.jstag svg {
+  color: #f7df1e;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.reactjstag svg {
+  color: #61dafb;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.nodejstag svg {
+  color: #83cd29;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.mysqltag svg {
+  color: #00758f;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.mongotag svg {
+  color: #4db33d;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+.expresstag svg {
+  color: #ffffff;
+  font-size: 2.5rem;
+  width: 100px;
+  height: 100px;
+}
+
+/* Text styling */
+.htmltag p,
+.csstag p,
+.bootstraptag p,
+.jstag p,
+.reactjstag p,
+.nodejstag p,
+.mysqltag p,
+.mongotag p,
+.expresstag p {
+  margin: 10px 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 576px) {
+  .htmltag,
+  .csstag,
+  .bootstraptag,
+  .jstag,
+  .reactjstag,
+  .nodejstag,
+  .mysqltag,
+  .mongotag,
+  .expresstag {
+    max-width: 100px;
+    height: 100px;
+  }
+  .htmltag svg,
+  .csstag svg,
+  .bootstraptag svg,
+  .jstag svg,
+  .reactjstag svg,
+  .nodejstag svg,
+  .mysqltag svg,
+  .mongotag svg ,
+  .expresstag svg{
+    font-size: 2rem;
+  }
+}
+
+
+
+
+
+.btn {
+  font-size: 18px;
+  color: white;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  font-family: "Montserrat Alternates", sans-serif;
+  padding: 10px 25px;
+  border-radius: 10px;
+  backdrop-filter: blur(6px);
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(120deg, #00f0ff, #ff00e0, #00ff8c, #ffcc00, #00f0ff);
+  background-size: 400% 400%;
+  animation: animatedBorder 6s linear infinite;
+  z-index: -2;
+  border-radius: 12px;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background-color: rgb(14, 12, 12);
+  z-index: -1;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.033);
+}

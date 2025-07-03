@@ -1,0 +1,16 @@
+.btn {
+    font-size: 18px;
+    color: white;
+}
+
+.sidebar {
+    background-color: black;
+    color: white;
+    font-size: 18px;
+}
+
+.btn1 svg {
+    width: 25px;
+    height: 25px;
+    color: white;
+}
