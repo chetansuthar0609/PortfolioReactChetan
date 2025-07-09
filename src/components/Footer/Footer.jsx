@@ -19,7 +19,7 @@ const Footer = () => {
                             © {new Date().getFullYear()} Chetan Suthar. All Rights Reserved.
                         </p>
                     </div>
-                    <div className="col-md-6 text-md-end">
+                    <div className={`${style.ftSocial} col-md-6 text-md-end`}>
                         <a href="https://github.com/chetansuthar" target="_blank" rel="noreferrer" className={`${style.footerLink}`}>
                             GitHub
                         </a>
